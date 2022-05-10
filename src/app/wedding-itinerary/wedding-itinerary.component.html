@@ -1,0 +1,30 @@
+<div class="wrapper">
+	<img src="../../assets/bording-pass[3653].jpg">
+	<div class="info">
+		<div class="description" *ngFor="let info of infos">
+			<p>
+                <a href="{{ info.location }}">
+                    <mat-icon>location_on</mat-icon>
+                    {{ info.name }}
+                </a>
+			</p>
+			<p>
+				<b>Адрес:</b>
+				{{ info.address }}
+			</p>
+			<p>
+				<b>Транспорт:</b>
+				{{ info.transport }}
+			</p>
+			<p>
+				<b>Паркиране:</b>
+				{{ info.parking }}
+			</p>
+			<p *ngIf="info.goodToKnow">
+				<b>Полезна информация:</b>
+				{{ info.goodToKnow }}
+			</p>
+		</div>
+	</div>
+
+</div>

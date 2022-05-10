@@ -1,0 +1,90 @@
+<div class="wrapper">
+	<h2>
+		Оставете своите координати за щастлив брак тук:
+	</h2>
+	<div>
+		<form [formGroup]="form"
+			(ngSubmit)="onSubmit()"
+			class="recipe">
+			<mat-form-field appearance="fill">
+				<mat-label>Казвам се</mat-label>
+				<input matInput
+					type="text"
+					formControlName="guestName">
+			</mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>
+					Познавам младоженците от
+				</mat-label>
+				<input matInput
+					type="text"
+					formControlName="iKnow">
+			</mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>
+					Когато разбрах, че Алекс и Живка ще се женят, първото нещо, което ми дойде на ум беше
+				</mat-label>
+				<input matInput
+					type="text"
+					formControlName="whenIUnderstood">
+			</mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>
+					Най-лудият ми спомен с булката/младоженеца е
+				</mat-label>
+				<textarea matInput
+					type="text"
+					formControlName="memory"></textarea>
+			</mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>
+					Като експерт в любовта, моят съвет е
+				</mat-label>
+				<textarea matInput
+					type="text"
+					formControlName="expert"></textarea>
+			</mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>
+					През медецият месец задължително трябва
+				</mat-label>
+				<textarea matInput
+					type="text"
+					formControlName="honeymoon"></textarea>
+			</mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>
+					А за дълъг семеен живот
+				</mat-label>
+				<textarea matInput
+					type="text"
+					formControlName="happyEverAfter"></textarea>
+			</mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>
+					След
+					<b>10 години</b>
+					надявам се, че двамата ще
+				</mat-label>
+				<textarea matInput
+					type="text"
+					formControlName="afterYears"></textarea>
+			</mat-form-field>
+
+			<button [disabled]="!form.valid"
+				mat-flat-button
+				color="primary"
+				class="submit-btn"
+				type="submit">
+				Запази рецептата си
+			</button>
+		</form>
+	</div>
+</div>

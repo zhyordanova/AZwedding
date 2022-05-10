@@ -1,0 +1,88 @@
+<mat-toolbar>
+	<button *ngIf="sidenav.mode === 'over'"
+		(click)="sidenav.toggle()"
+		mat-icon-button>
+
+		<mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+		<!-- <mat-icon *ngIf="sidenav.opened">close</mat-icon> -->
+	</button>
+	AZwedding
+</mat-toolbar>
+
+<mat-sidenav-container>
+	<mat-sidenav #sidenav="matSidenav">
+		<button mat-button
+			class="menu-button"
+            [routerLink]="['newlyweds']"
+			(click)="sidenav.toggle()">
+			<mat-icon>favorite</mat-icon>
+			<span>Главни действащи лица</span>
+		</button>
+
+		<!-- <button mat-button
+			class="menu-button"
+            [routerLink]="['our-story']"
+			(click)="sidenav.toggle()">
+			<mat-icon>movie_filter</mat-icon>
+			<span>Нашата история</span>
+		</button> -->
+
+		<button mat-button
+			class="menu-button"
+            [routerLink]="['wedding-itinerary']"
+			(click)="sidenav.toggle()">
+			<mat-icon>directions_boat</mat-icon>
+			<span>Сватбен маршрут</span>
+		</button>
+
+		<button mat-button
+			class="menu-button"
+            [routerLink]="['team']"
+			(click)="sidenav.toggle()">
+			<mat-icon>supervisor_account</mat-icon>
+			<span>Екипът</span>
+		</button>
+
+		<button mat-button
+			class="menu-button"
+            [routerLink]="['gallery']"
+			(click)="sidenav.toggle()">
+			<mat-icon>photo_library</mat-icon>
+			<span>Галерия</span>
+		</button>
+
+		<button mat-button
+			class="menu-button"
+            [routerLink]="['recipes-for-happy-marriage']"
+			(click)="sidenav.toggle()">
+			<mat-icon>local_library</mat-icon>
+			<span>
+				Координати за щастлив брак
+			</span>
+		</button>
+
+		<button mat-button
+			class="menu-button"
+            [routerLink]="['charity']"
+			(click)="sidenav.toggle()">
+			<mat-icon>local_florist</mat-icon>
+			<span>
+				Благотворителна кауза
+			</span>
+		</button>
+
+		<button mat-button
+			class="menu-button"
+			[routerLink]="['rsvp']"
+			(click)="sidenav.toggle()">
+			<mat-icon>local_play</mat-icon>
+			<span>Потвърди своето присъствие</span>
+		</button>
+
+	</mat-sidenav>
+	
+	<mat-sidenav-content>
+		<router-outlet></router-outlet>
+	</mat-sidenav-content>
+</mat-sidenav-container>
+

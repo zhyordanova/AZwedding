@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+// @import "~bootstrap/dist/css/bootstrap.min.css";
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.wrapper {
+    padding: 30px;
+    border: 1px solid rgba(42, 42, 189, 0.192);
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    margin: 50px 20px;
+    h1 {
+        text-align: center;
+        font-style: italic;
+        margin: 20px 0;
+        padding: 20px;
+    }
+}

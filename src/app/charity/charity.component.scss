@@ -1,0 +1,27 @@
+h3 {
+    text-align: center;
+}
+
+.charity-container {
+    display: flex;
+    margin: 50px;
+    text-align: justify;
+
+    h4 {
+        text-decoration: underline;
+    }
+    
+    img {
+        width: 300px;
+        height: auto;
+        // margin: 50px;
+    }
+
+    .charity-description:nth-child(2) {
+        margin-left: 50px;
+    }
+
+    .charity-description:nth-child(1) {
+        margin-right: 50px;
+    }
+}
