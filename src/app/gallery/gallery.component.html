@@ -37,23 +37,21 @@
         </div>
 	</div>
 
-	<p-galleria 
+	<p-galleria
         *ngIf="imageUploads$"
         [value]="imageUploads$"
 		[responsiveOptions]="responsiveOptions"
-		[containerStyle]="{'max-width': '660px', 'margin-top':'2em'}"
+		[containerStyle]="{'max-width': '100%', 'margin-top':'2em'}"
 		[numVisible]="4"
-		thumbnailsPosition="right">
+    [circular]="true"
+    [showItemNavigators]="true"
+    [showThumbnails]="false"
+    [autoPlay]="true"
+    [transitionInterval]="2000">
 		<ng-template pTemplate="item"
 			let-item>
 			<img [src]="item.previewImageSrc"
 				style="width: 100%; display: block;">
-		</ng-template>
-		<ng-template pTemplate="thumbnail"
-			let-item>
-			<div class="grid grid-nogutter justify-content-center">
-				<img [src]="item.thumbnailImageSrc">
-			</div>
 		</ng-template>
 	</p-galleria>
 

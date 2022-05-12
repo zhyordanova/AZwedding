@@ -40,9 +40,15 @@ export class GalleryComponent implements OnInit {
   ngOnInit(): void {
     this.uploadService.getFiles().snapshotChanges().pipe(
       map(changes =>
-        changes.map(c =>
-          ({ key: c.payload.key, ...c.payload.val() })
-        )
+        changes.map(c => {
+          const image = {
+            previewImageSrc: c.payload.val()?.url,
+            thumbnailImageSrc: c.payload.val()?.url,
+            alt: c.payload.val()?.name,
+            title: c.payload.val()?.name
+          };
+          return image;
+        })
       )
     ).subscribe(imageUploads => {
       this.imageUploads$ = imageUploads;
