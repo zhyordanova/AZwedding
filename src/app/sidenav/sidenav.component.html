@@ -6,7 +6,7 @@
 		<mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
 		<!-- <mat-icon *ngIf="sidenav.opened">close</mat-icon> -->
 	</button>
-	AZwedding
+  <span class="logo" [routerLink]="['']">AZwedding</span>
 </mat-toolbar>
 
 <mat-sidenav-container>
@@ -80,7 +80,7 @@
 		</button>
 
 	</mat-sidenav>
-	
+
 	<mat-sidenav-content>
 		<router-outlet></router-outlet>
 	</mat-sidenav-content>
