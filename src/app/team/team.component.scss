@@ -20,7 +20,7 @@ p {
 .container {
     height: 100%;
     width: 100%;
-    margin: 50px 0;
+    // margin: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,11 +127,6 @@ h3 {
     stroke-dashoffset: 360;
     transition: 0.6s ease-out;
 }
-
-//   svg {
-//     fill: #17141d;
-//     stroke-width: 2px;
-//   }
 
 .card:hover .stroke {
     stroke-dashoffset: 100;

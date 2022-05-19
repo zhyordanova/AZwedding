@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { map } from 'rxjs/operators';
+import { ToastrService } from 'ngx-toastr';
 
 import { ImageUpload } from 'src/app/models/image-upload.model';
 import { ImageUploadService } from './service/image-upload.service';
@@ -19,8 +21,15 @@ export class GalleryComponent implements OnInit {
   imageUploads!: any[];
   imagesUrl!: any[];
   previews: any[] = [];
+  form: FormGroup;
 
-  constructor(private uploadService: ImageUploadService) { }
+  constructor(
+    private uploadService: ImageUploadService,
+    private toastr: ToastrService
+  ) {
+    this.form = new FormGroup({ picture: new FormControl('', [Validators.required]) })
+
+  }
 
   responsiveOptions: any[] = [
     {
@@ -52,7 +61,6 @@ export class GalleryComponent implements OnInit {
       )
     ).subscribe(imageUploads => {
       this.imageUploads = imageUploads;
-      // console.log(this.imageUploads)
     });
   }
 
@@ -61,6 +69,7 @@ export class GalleryComponent implements OnInit {
     if (this.selectedImages) {
       this.fileName = this.selectedImages[0].name;
       this.previews.push(this.selectedImages);
+
     } else {
       this.fileName = 'Изберете снимка';
     }
@@ -78,9 +87,8 @@ export class GalleryComponent implements OnInit {
             this.percentage = Math.round(percentage ? percentage : 0);
           },
           error => {
-            console.log(error);
             this.percentage = 0;
-            this.message = `Не мога да кача снимка: ${image.name}!`;
+            this.toastr.error(error.message);
           }
         );
       }

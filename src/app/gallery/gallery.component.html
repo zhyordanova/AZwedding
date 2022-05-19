@@ -4,7 +4,8 @@
 		<mat-form-field>
 			<div>
 				<mat-toolbar>
-					<input [value]="fileName"
+					<input [formGroup]="form"
+						[value]="fileName"
 						matInput
 						class="inputFile">
 
@@ -32,11 +33,11 @@
 			<span class="progress">{{ percentage }}%</span>
 		</mat-toolbar>
 
-		<div>
+		<!-- <div>
 			<img *ngFor='let preview of previews'
 				[src]="preview"
 				class="preview">
-		</div>
+		</div> -->
 	</div>
 
 	<p-galleria *ngIf="imageUploads"

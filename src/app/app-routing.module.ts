@@ -15,7 +15,6 @@ const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '', component: CountDownComponent },
   { path: 'newlyweds', component: NewlywedsComponent },
-  // { path: 'our-story', component: OurStoryComponent },
   { path: 'wedding-itinerary', component: WeddingItineraryComponent },
   { path: 'team', component: TeamComponent },
   {
