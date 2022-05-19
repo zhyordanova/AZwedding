@@ -1,24 +1,27 @@
 .background {
-    background-image: url("../../../../assets/sydney.jpg");
-    height: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.recipe {
-    width: 800px;
+  background-image: url("../../../../assets/sydney.jpg");
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h2 {
-    text-align: center;
-    margin: 20px;
-    padding: 30px;
+  text-align: center;
+  margin: 20px;
+  padding: 30px;
 }
 
-.recipe {
+.recipe-add-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .recipe {
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 20px;
     padding: 30px;
+  }
 }

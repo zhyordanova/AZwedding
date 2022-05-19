@@ -7,25 +7,39 @@ h3 {
 }
 
 .charity-container {
-    display: flex;
-    margin: 50px;
-    text-align: justify;
+  display: flex;
+  margin: 50px;
+  text-align: justify;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 
-    h4 {
-        text-decoration: underline;
-    }
-    
-    img {
-        width: 300px;
-        height: auto;
-        // margin: 50px;
-    }
+  h4 {
+    text-decoration: underline;
+  }
 
-    .charity-description:nth-child(2) {
-        margin-left: 50px;
-    }
+  img {
+    width: 300px;
+    height: auto;
+    margin: 25px;
+  }
 
-    .charity-description:nth-child(1) {
-        margin-right: 50px;
-    }
+  .charity-description {
+    flex: 1 0 250px;
+  }
+
+  // .charity-description:nth-child(1) {
+  //   margin-right: 50px;
+
+  //   @media screen and (max-width: 739px) {
+  //     margin-right: 0;
+  //   }
+  // }
+
+  // .charity-description:nth-child(2) {
+  //   margin-left: 50px;
+
+  //   // @media screen and (max-width: 739px) {
+  //   //   margin-left: 0;
+  //   // }
+  // }
 }

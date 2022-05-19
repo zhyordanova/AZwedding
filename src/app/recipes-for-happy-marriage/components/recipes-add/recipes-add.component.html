@@ -1,106 +1,114 @@
 <div class="background">
-	<div class="wrapper">
+	<div class="wrapper recipe-add-wrapper">
 		<h2>
 			Оставете своите координати за щастлив брак тук:
 		</h2>
-		<div>
-			<form [formGroup]="form"
-				(ngSubmit)="onSubmit()"
-				class="recipe">
-				<mat-form-field appearance="fill">
-					<mat-label>
-						<b>Казвам се</b>
-					</mat-label>
-					<input matInput
-						type="text"
-						formControlName="guestName">
-				</mat-form-field>
 
-				<mat-form-field appearance="fill">
-					<mat-label>
-						<b>
-							Познавам младоженците от
-						</b>
-					</mat-label>
-					<input matInput
-						type="text"
-						formControlName="iKnow">
-				</mat-form-field>
+    <form [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="recipe">
+      <mat-form-field appearance="fill">
+        <mat-label>
+          <b>Казвам се</b>
+        </mat-label>
+        <textarea
+          matInput
+          rows="3"
+          type="text"
+          formControlName="guestName">
+        </textarea>
+      </mat-form-field>
 
-				<mat-form-field appearance="fill">
-					<mat-label>
-						<b>
-							Когато разбрах, че Алекс и Живка ще се женят, първото нещо, което ми дойде на ум беше
-						</b>
-					</mat-label>
-					<input matInput
-						type="text"
-						formControlName="whenIUnderstood">
-				</mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>
+          <b>
+            Познавам младоженците от
+          </b>
+        </mat-label>
+        <textarea
+          matInput
+          type="text"
+          formControlName="iKnow">
+        </textarea>
+      </mat-form-field>
 
-				<mat-form-field appearance="fill">
-					<mat-label>
-						<b>
-							Най-лудият ми спомен с булката/младоженеца е
-						</b>
-					</mat-label>
-					<textarea matInput
-						type="text"
-						formControlName="memory"></textarea>
-				</mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>
+          <b>
+            Когато разбрах, че Алекс и Живка ще се женят, първото нещо, което ми дойде на ум беше
+          </b>
+        </mat-label>
+        <textarea
+          matInput
+          type="text"
+          formControlName="whenIUnderstood">
+        </textarea>
+      </mat-form-field>
 
-				<mat-form-field appearance="fill">
-					<mat-label>
-						<b>
-							Като експерт в любовта, моят съвет е
-						</b>
-					</mat-label>
-					<textarea matInput
-						type="text"
-						formControlName="expert"></textarea>
-				</mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>
+          <b>
+            Най-лудият ми спомен с булката/младоженеца е
+          </b>
+        </mat-label>
+        <textarea
+          matInput
+          type="text"
+          formControlName="memory">
+        </textarea>
+      </mat-form-field>
 
-				<mat-form-field appearance="fill">
-					<mat-label>
-						<b>
-							През медецият месец задължително трябва
-						</b>
-					</mat-label>
-					<textarea matInput
-						type="text"
-						formControlName="honeymoon"></textarea>
-				</mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>
+          <b>
+            Като експерт в любовта, моят съвет е
+          </b>
+        </mat-label>
+        <textarea matInput
+          type="text"
+          formControlName="expert"></textarea>
+      </mat-form-field>
 
-				<mat-form-field appearance="fill">
-					<mat-label>
-						<b>
-							А за дълъг семеен живот
-						</b>
-					</mat-label>
-					<textarea matInput
-						type="text"
-						formControlName="happyEverAfter"></textarea>
-				</mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>
+          <b>
+            През медецият месец задължително трябва
+          </b>
+        </mat-label>
+        <textarea matInput
+          type="text"
+          formControlName="honeymoon"></textarea>
+      </mat-form-field>
 
-				<mat-form-field appearance="fill">
-					<mat-label>
-						<b>
-							След <em>10 години</em> надявам се, че двамата ще
-						</b>
-					</mat-label>
-					<textarea matInput
-						type="text"
-						formControlName="afterYears"></textarea>
-				</mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>
+          <b>
+            А за дълъг семеен живот
+          </b>
+        </mat-label>
+        <textarea matInput
+          type="text"
+          formControlName="happyEverAfter"></textarea>
+      </mat-form-field>
 
-				<button [disabled]="!form.valid"
-					mat-flat-button
-					color="primary"
-					class="submit-btn"
-					type="submit">
-					Запази рецептата си
-				</button>
-			</form>
-		</div>
+      <mat-form-field appearance="fill">
+        <mat-label>
+          <b>
+            След <em>10 години</em> надявам се, че двамата ще
+          </b>
+        </mat-label>
+        <textarea matInput
+          type="text"
+          formControlName="afterYears"></textarea>
+      </mat-form-field>
+
+      <button [disabled]="!form.valid"
+        mat-flat-button
+        color="primary"
+        class="submit-btn"
+        type="submit">
+        Запази рецептата си
+      </button>
+    </form>
 	</div>
 </div>
