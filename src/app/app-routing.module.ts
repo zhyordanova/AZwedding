@@ -9,7 +9,6 @@ import { RecipesListComponent } from './recipes-for-happy-marriage/components/re
 import { TeamComponent } from './team/team.component';
 import { CharityComponent } from './charity/charity.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import { RsvpComponent } from './rsvp/rsvp.component';
 
 
 const routes: Routes = [
@@ -28,8 +27,7 @@ const routes: Routes = [
       { path: 'add', component: RecipesAddComponent },
     ]
   },
-  { path: 'charity', component: CharityComponent },
-  { path: 'rsvp', component: RsvpComponent },
+  { path: 'charity', component: CharityComponent }
 ];
 
 @NgModule({

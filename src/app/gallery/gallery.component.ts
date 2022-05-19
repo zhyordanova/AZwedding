@@ -16,7 +16,7 @@ export class GalleryComponent implements OnInit {
   percentage = 0;
   fileName = 'Изберете снимка';
   message = '';
-  imageUploads$!: any[];
+  imageUploads!: any[];
   imagesUrl!: any[];
   previews: any[] = [];
 
@@ -51,15 +51,10 @@ export class GalleryComponent implements OnInit {
         })
       )
     ).subscribe(imageUploads => {
-      this.imageUploads$ = imageUploads;
+      this.imageUploads = imageUploads;
+      // console.log(this.imageUploads)
     });
   }
-
-  // firebase.database().ref('image-upload/').once('value').then((snapshot) {
-  // snapshot.forEach((imageSnapshot) {
-  //   var image = imageSnapshot.val();
-  //   console.log(image.url);
-  // })
 
   selectImage(event: any) {
     this.selectedImages = event.target.files;
@@ -73,6 +68,7 @@ export class GalleryComponent implements OnInit {
 
   upload() {
     if (this.selectedImages) {
+      console.log('selected images', this.selectedImages)
       const image: File | null = this.selectedImages.item(0);
       this.selectedImages = undefined;
       if (image) {

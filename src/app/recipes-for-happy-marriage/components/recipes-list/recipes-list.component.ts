@@ -10,7 +10,7 @@ import { RecipeService } from '../../service/recipe.service';
   styleUrls: ['./recipes-list.component.scss']
 })
 export class RecipesListComponent implements OnInit {
-  Recipes?: RecipeForHappyMarriage[];
+  recipes?: RecipeForHappyMarriage[];
 
   constructor(private recipeApi: RecipeService,) { }
 
@@ -22,7 +22,7 @@ export class RecipesListComponent implements OnInit {
         )
       )
     ).subscribe(data => {
-      this.Recipes = data;
+      this.recipes = data;
     });
   }
 }

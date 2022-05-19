@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-import { GoogleMapsModule } from '@angular/google-maps';
 
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
@@ -22,8 +21,6 @@ import { TeamComponent } from './team/team.component';
 import { CharityComponent } from './charity/charity.component';
 import { GalleriaModule } from 'primeng/galleria';
 import { GalleryComponent } from './gallery/gallery.component';
-import { RsvpComponent } from './rsvp/rsvp.component';
-
 
 @NgModule({
   declarations: [
@@ -37,7 +34,6 @@ import { RsvpComponent } from './rsvp/rsvp.component';
     GalleryComponent,
     CharityComponent,
     TeamComponent,
-    RsvpComponent,
     FooterComponent,
   ],
   imports: [
@@ -51,10 +47,9 @@ import { RsvpComponent } from './rsvp/rsvp.component';
     MaterialModule,
     NoopAnimationsModule,
     ToastrModule.forRoot(),
-    GoogleMapsModule,
-    GalleriaModule
+    GalleriaModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

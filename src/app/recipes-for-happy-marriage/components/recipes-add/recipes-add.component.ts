@@ -71,7 +71,8 @@ export class RecipesAddComponent implements OnInit {
   }
 
   onSubmit() {
-    this.recipeApi.AddRecipe(this.form.value);
+    this.recipeApi.AddRecipe({...this.form.value, dateCreated: Date.now()});
+    console.log({...this.form.value, dateCreated: Date.now()})
     this.toastr.success('Вашите координати бяха добавени успешно!');
     this.ResetForm();
     this.router.navigate(['/recipes-for-happy-marriage']);

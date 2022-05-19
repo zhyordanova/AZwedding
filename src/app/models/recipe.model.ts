@@ -8,4 +8,5 @@ export interface RecipeForHappyMarriage {
     honeymoon: string;
     happyEverAfter: string;
     afterYears: string;
+    dateCreated: number;
 }

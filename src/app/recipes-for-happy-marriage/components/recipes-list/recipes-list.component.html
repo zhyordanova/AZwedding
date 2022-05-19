@@ -1,62 +1,65 @@
-<div class="wrapper">
-	<h1>
-		Координати за щастлив брак
-	</h1>
-	<button [routerLink]="['add']"
-		class="add"
-		mat-button
-		color="accent">
-		Остави свойте координати тук
-	</button>
-
-	<mat-card *ngFor="let recipe of Recipes"
-		class="card">
-		<p>
-			<b>Казвам се</b>
-			{{ recipe.guestName }}
-		</p>
-		<p>
-			<b>
-				Познавам младоженците от
-			</b>
-			{{ recipe.iKnow }}
-		</p>
-		<p>
-			<b>
-				Когато разбрах, че Алекс и Живка ще се женят, първото нещо, което ми дойде на ум беше
-			</b>
-			{{ recipe.whenIUnderstood }}
-		</p>
-		<p>
-			<b>
-				Най-лудият ми спомен с булката/младоженеца е
-			</b>
-			{{ recipe.memory }}
-		</p>
-		<p>
-			<b>
-				Като експерт в любовта, моят съвет е
-			</b>
-			{{ recipe.expert }}
-		</p>
-		<p>
-			<b>
-				През медецият месец задължително трябва
-			</b>
-			{{ recipe.honeymoon }}
-		</p>
-		<p>
-			<b>
-				А за дълъг семеен живот
-			</b>
-			{{ recipe.happyEverAfter }}
-		</p>
-		<p>
-			<b>
-				След 10 години надявам се, че двамата ще
-			</b>
-			{{ recipe.afterYears }}
-		</p>
-	</mat-card>
-
+<div class="background">
+	<div class="wrapper">
+		<h1>
+			Координати за щастлив брак
+		</h1>
+		<button [routerLink]="['add']"
+			class="add"
+			mat-button
+			color="accent">
+			Остави свойте координати тук
+		</button>
+	
+		<mat-card *ngFor="let recipe of recipes"
+			class="card">
+			<p>
+				<b>Казвам се</b>
+				{{ recipe.guestName }}
+			</p>
+			<p>
+				<b>
+					Познавам младоженците от
+				</b>
+				{{ recipe.iKnow }}
+			</p>
+			<p>
+				<b>
+					Когато разбрах, че Алекс и Живка ще се женят, първото нещо, което ми дойде на ум беше
+				</b>
+				{{ recipe.whenIUnderstood }}
+			</p>
+			<p>
+				<b>
+					Най-лудият ми спомен с булката/младоженеца е
+				</b>
+				{{ recipe.memory }}
+			</p>
+			<p>
+				<b>
+					Като експерт в любовта, моят съвет е
+				</b>
+				{{ recipe.expert }}
+			</p>
+			<p>
+				<b>
+					През медецият месец задължително трябва
+				</b>
+				{{ recipe.honeymoon }}
+			</p>
+			<p>
+				<b>
+					А за дълъг семеен живот
+				</b>
+				{{ recipe.happyEverAfter }}
+			</p>
+			<p>
+				<b>
+					След 10 години надявам се, че двамата ще
+				</b>
+				{{ recipe.afterYears }}
+			</p>
+		</mat-card>
+	
+	</div>
+	
 </div>

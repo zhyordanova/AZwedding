@@ -12,12 +12,12 @@ body {
 }
 
 .wrapper {
-    padding: 30px;
-    border: 1px solid rgba(42, 42, 189, 0.192);
-    -webkit-border-radius: 18px;
-    -moz-border-radius: 18px;
-    border-radius: 18px;
-    margin: 50px 20px;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h1 {
         text-align: center;
         font-style: italic;

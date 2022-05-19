@@ -1,13 +1,14 @@
-<div class="wrapper">
-	<video id="sailingVideo"
-		autoplay
+<div class="full-screen-video-container">
+	<video autoplay
 		muted
-		loop>
-
-		<source src="https://mdbootstrap.com/img/video/Sail-Away.mp4"
+		playsinline
+		loop
+		onloadedmetadata="this.muted = true"
+		id="myVideo">
+		<source src="../../assets/x2matecom-Cruise-ship-Timelapse.mp4"
 			type="video/mp4">
-
 	</video>
+
 	<div class="timer">
 		<h1>
 			<b>
@@ -30,5 +31,12 @@
 			{{secondsToWeddingDay}}
 		</span>
 		Секунди
+		<div class="confirm">
+			<a href="https://forms.gle/93rmajHSuePY6F9TA">
+				<b>
+					Може да потвърди своето присъствие тук
+				</b>
+			</a>
+		</div>
 	</div>
 </div>

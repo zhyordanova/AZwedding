@@ -5,7 +5,9 @@
 			<div>
 				<mat-toolbar>
 					<input [value]="fileName"
-						matInput>
+						matInput
+						class="inputFile">
+
 					<button [disabled]="!selectedImages"
 						(click)="upload()"
 						mat-flat-button
@@ -30,36 +32,21 @@
 			<span class="progress">{{ percentage }}%</span>
 		</mat-toolbar>
 
-        <div>
-            <img *ngFor='let preview of previews'
-                [src]="preview"
-                class="preview">
-        </div>
+		<div>
+			<img *ngFor='let preview of previews'
+				[src]="preview"
+				class="preview">
+		</div>
 	</div>
 
-	<p-galleria
-        *ngIf="imageUploads$"
-        [value]="imageUploads$"
+	<p-galleria *ngIf="imageUploads"
+		[value]="imageUploads"
 		[responsiveOptions]="responsiveOptions"
 		[containerStyle]="{'max-width': '100%', 'margin-top':'2em'}"
-		[numVisible]="4"
-    [circular]="true"
-    [showItemNavigators]="true"
-    [showThumbnails]="false"
-    [autoPlay]="true"
-    [transitionInterval]="2000">
-		<ng-template pTemplate="item"
-			let-item>
-			<img [src]="item.previewImageSrc"
-				style="width: 100%; display: block;">
-		</ng-template>
-	</p-galleria>
-
-	<!-- <p-galleria *ngFor="let image of imageUploads"
-		[value]="[imageUploads]"
-		[containerStyle]="{'max-width': '640px'}"
-		[numVisible]="5"
+		[numVisible]="200"
 		[circular]="true"
+		[showItemNavigators]="true"
+		[showThumbnails]="false"
 		[autoPlay]="true"
 		[transitionInterval]="2000">
 		<ng-template pTemplate="item"
@@ -67,39 +54,6 @@
 			<img [src]="item.previewImageSrc"
 				style="width: 100%; display: block;">
 		</ng-template>
-		<ng-template pTemplate="thumbnail"
-			let-item>
-			<div class="grid grid-nogutter justify-content-center">
-				<img [src]="item.thumbnailImageSrc"
-					style="display: block;">
-			</div>
-		</ng-template>
-	</p-galleria> -->
+	</p-galleria>
 
-	<!-- <div *ngIf="message"
-		class="message">
-		{{ message }}
-	</div> -->
-	<!-- <mat-card class="example-card">
-		<mat-card-header>
-			<mat-card-title></mat-card-title>
-		</mat-card-header>
-		<mat-card-content>
-			<mat-list role="list">
-				<mat-list-item *ngFor="let image of imageUploads"
-					role="listitem">
-					<img src="{{ image.url }}"
-						alt="{{ image.name }}"
-						class="preview">
-				</mat-list-item>
-			</mat-list>
-		</mat-card-content>
-	</mat-card> -->
-
-	<!-- <div *ngFor="let image of imageUploads">
-		<div class="gallery">
-			<img src='{{image.url}}'
-				alt>
-		</div>
-	</div> -->
 </div>
