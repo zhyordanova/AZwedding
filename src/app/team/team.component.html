@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="teams-wrapper">
 
 	<h1>
 		Екипът, които ще ни помогне да превърнем нашият мечтан сватбен ден в реалност
@@ -7,7 +7,6 @@
 		Всеки един от тях е избор от първа среща. Бяха до нас през целия процес по организацията на това събитие и помагаха със съвети и приятелско отношение. Доверяваме им се безрезервно, че сме се оставили в най-добрите ръце в бранша.
 	</p>
 
-	<body>
 		<div class="container">
 			<div *ngFor="let team of teams"
             class="card">
@@ -20,7 +19,7 @@
 				</div>
 				<div class="description">
 					<p>
-						{{ team.description }} 
+						{{ team.description }}
 					</p>
 					<div class="icon">
 						<a href="{{ team.socialMedia }}">
@@ -30,6 +29,6 @@
 				</div>
 			</div>
         </div>
-	</body>
 </div>
+
 
