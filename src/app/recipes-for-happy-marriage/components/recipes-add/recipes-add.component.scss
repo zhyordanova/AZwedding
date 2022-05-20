@@ -25,3 +25,28 @@ h2 {
     padding: 30px;
   }
 }
+
+.mobile-label {
+  display: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.desktop-label {
+  display: block;
+}
+
+@media screen and (max-width: 599px) {
+  .mat-card-xl-image {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .mobile-label {
+    display: block;
+  }
+
+  .desktop-label {
+    display: none;
+  }
+}

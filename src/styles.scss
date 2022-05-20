@@ -9,6 +9,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -36,5 +37,12 @@ a {
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .mat-card-xl-image {
+    width: 150px !important;
+    height: 150px !important;
   }
 }

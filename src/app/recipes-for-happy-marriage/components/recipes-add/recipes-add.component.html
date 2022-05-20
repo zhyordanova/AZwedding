@@ -7,20 +7,22 @@
     <form [formGroup]="form"
       (ngSubmit)="onSubmit()"
       class="recipe">
+
+      <span class="mobile-label">Казвам се</span>
       <mat-form-field appearance="fill">
-        <mat-label>
+        <mat-label class="desktop-label">
           <b>Казвам се</b>
         </mat-label>
         <textarea
           matInput
-          rows="3"
           type="text"
           formControlName="guestName">
         </textarea>
       </mat-form-field>
 
+      <span class="mobile-label">Познавам младоженците от</span>
       <mat-form-field appearance="fill">
-        <mat-label>
+        <mat-label class="desktop-label">
           <b>
             Познавам младоженците от
           </b>
@@ -32,8 +34,9 @@
         </textarea>
       </mat-form-field>
 
+      <span class="mobile-label">Когато разбрах, че Алекс и Живка ще се женят, първото нещо, което ми дойде на ум беше</span>
       <mat-form-field appearance="fill">
-        <mat-label>
+        <mat-label class="desktop-label">
           <b>
             Когато разбрах, че Алекс и Живка ще се женят, първото нещо, което ми дойде на ум беше
           </b>
@@ -45,8 +48,9 @@
         </textarea>
       </mat-form-field>
 
+      <span class="mobile-label">Най-лудият ми спомен с булката/младоженеца е</span>
       <mat-form-field appearance="fill">
-        <mat-label>
+        <mat-label class="desktop-label">
           <b>
             Най-лудият ми спомен с булката/младоженеца е
           </b>
@@ -58,8 +62,9 @@
         </textarea>
       </mat-form-field>
 
+      <span class="mobile-label">Като експерт в любовта, моят съвет е</span>
       <mat-form-field appearance="fill">
-        <mat-label>
+        <mat-label class="desktop-label">
           <b>
             Като експерт в любовта, моят съвет е
           </b>
@@ -69,8 +74,9 @@
           formControlName="expert"></textarea>
       </mat-form-field>
 
+      <span class="mobile-label">През медецият месец задължително трябва</span>
       <mat-form-field appearance="fill">
-        <mat-label>
+        <mat-label class="desktop-label">
           <b>
             През медецият месец задължително трябва
           </b>
@@ -80,8 +86,9 @@
           formControlName="honeymoon"></textarea>
       </mat-form-field>
 
+      <span class="mobile-label">А за дълъг семеен живот</span>
       <mat-form-field appearance="fill">
-        <mat-label>
+        <mat-label class="desktop-label">
           <b>
             А за дълъг семеен живот
           </b>
@@ -91,8 +98,9 @@
           formControlName="happyEverAfter"></textarea>
       </mat-form-field>
 
+      <span class="mobile-label">След <em>10 години</em> надявам се, че двамата ще</span>
       <mat-form-field appearance="fill">
-        <mat-label>
+        <mat-label class="desktop-label">
           <b>
             След <em>10 години</em> надявам се, че двамата ще
           </b>
