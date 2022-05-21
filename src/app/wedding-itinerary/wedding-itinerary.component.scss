@@ -16,6 +16,7 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
   .description{
     align-content: space-between;
     flex: 1 0 250px;

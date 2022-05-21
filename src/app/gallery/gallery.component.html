@@ -32,13 +32,11 @@
 				color="accent"></mat-progress-bar>
 			<span class="progress">{{ percentage }}%</span>
 		</mat-toolbar>
-
-		<!-- <div>
-			<img *ngFor='let preview of previews'
-				[src]="preview"
-				class="preview">
-		</div> -->
 	</div>
+
+	<h2 *ngIf="!imageUploads?.length">
+		Още никои не е качил снимка. Можеш да бъди първият, който ще качи своята.
+	</h2>
 
 	<p-galleria *ngIf="imageUploads"
 		[value]="imageUploads"
