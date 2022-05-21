@@ -1,9 +1,12 @@
 <div class="full-screen-video-container">
-	<video autoplay
-		muted
+	<video 
+		autoplay
 		playsinline
+		muted 
 		loop
-		onloadedmetadata="this.muted = true"
+		oncanplay="this.play()"
+		onloadedmetadata="this.muted = false"
+		preload="auto"
 		id="myVideo">
 		<source src="../../assets/x2matecom-Cruise-ship-Timelapse.mp4"
 			type="video/mp4">

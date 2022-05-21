@@ -9,6 +9,10 @@
 			color="accent">
 			Остави свойте координати тук
 		</button>
+
+		<h2 *ngIf="!recipes?.length">
+			Все още никои не е оставим свойте съвети за младоженците. Бъди първият, който ще остави свойте.
+		</h2>
 	
 		<mat-card *ngFor="let recipe of recipes"
 			class="card">

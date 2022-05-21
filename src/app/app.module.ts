@@ -21,6 +21,7 @@ import { TeamComponent } from './team/team.component';
 import { CharityComponent } from './charity/charity.component';
 import { GalleriaModule } from 'primeng/galleria';
 import { GalleryComponent } from './gallery/gallery.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     CharityComponent,
     TeamComponent,
     FooterComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
