@@ -47,11 +47,17 @@ h2 {
 .mat-form-field {
     width: 100%;
 }
-.message {
-    background-color: #ddd;
-    padding: 15px;
-    color: #333;
-    border: #aaa solid 1px;
-    border-radius: 4px;
-    margin-bottom: 10px;
+// .message {
+//     background-color: #ddd;
+//     padding: 15px;
+//     color: #333;
+//     border: #aaa solid 1px;
+//     border-radius: 4px;
+//     margin-bottom: 10px;
+// }
+
+@media screen and (max-width: 599px) {
+    .inputFile {
+        width: 400px;
+    }
 }

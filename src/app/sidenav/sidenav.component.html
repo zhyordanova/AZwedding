@@ -3,17 +3,17 @@
 		(click)="sidenav.toggle()"
 		mat-icon-button>
 
-		<mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+		<mat-icon *ngIf="!sidenav.opened">anchor</mat-icon>
 	</button>
 
 	<span [routerLink]="['']"
-		class="logo">
+		class="header">
 		AZwedding
 	</span>
 
-	<span class="example-spacer"></span>
+	<!-- <span class="example-spacer"></span>
 
-	<p>С любезното съдействие на Марияна Найденова (Ментор)</p>
+	<img src="../../assets/logo.png"> -->
 
 </mat-toolbar>
 
@@ -72,6 +72,13 @@
 				Благотворителна кауза
 			</span>
 		</button>
+
+		<br>
+		<mat-divider></mat-divider>
+
+		<p>С любезното съдействие на</p>
+		<p>Марияна Найденова (Ментор)</p>
+
 	</mat-sidenav>
 
 	<mat-sidenav-content>

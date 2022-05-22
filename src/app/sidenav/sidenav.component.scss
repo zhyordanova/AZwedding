@@ -1,18 +1,27 @@
-.logo {
+.header {
     cursor: pointer;
 }
 
+// .example-spacer {
+//     flex: 1 1 auto;
+// }
+
+img {
+    width: 60px;
+}
+
 mat-toolbar {
-    background-color: rgb(62, 62, 249);
+    background-color: rgba(23, 40, 116, 0.997);
     color: white;
 }
 
-.example-spacer {
-    flex: 1 1 auto;
+mat-divider {
+    margin: 50px;
 }
 
 p {
     font-size: 11px;
+    font-weight: bolder;
     vertical-align: middle;
     white-space: pre-line;
 }
@@ -21,7 +30,7 @@ mat-sidenav {
     margin: 10px;
     width: 280px;
     border-right: none;
-    background-color: rgb(54, 54, 237);
+    background-color: rgba(23, 40, 116, 0.997);
     color: rgb(235, 199, 199);
     border-radius: 10px;
     padding: 10px;
@@ -62,3 +71,10 @@ mat-sidenav-content {
         border-radius: 10px;
     }
 }
+
+@media screen and (max-width: 599px) {
+    img {
+        width: 50px;
+    }
+}
+

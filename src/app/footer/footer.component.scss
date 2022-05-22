@@ -1,8 +1,11 @@
 mat-toolbar {
-    background-color: rgba(214, 221, 255, 0.384);
+    background-color: rgba(12, 25, 86, 0.997);
     color: rgba(57, 57, 230, 0.911);
     font-size: 14px;
     display: flex;
     justify-content: center;
     text-align: center;
+    img {
+        width: 60px;
+    }
 }

@@ -1,6 +1,7 @@
 .background {
   background-image: url("../../../../assets/sydney.jpg");
-  height: auto;
+  height: 100%;
+  margin: 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,6 +25,9 @@ h2 {
     margin: 20px;
     padding: 30px;
   }
+  // b {
+  //   color: rgb(3, 3, 216);
+  // }
 }
 
 .mobile-label {
