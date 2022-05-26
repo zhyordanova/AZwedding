@@ -45,4 +45,9 @@ a {
     width: 150px !important;
     height: 150px !important;
   }
+
+  .mat-toolbar-row,
+  .mat-toolbar-single-row {
+    height: 64px !important;
+  }
 }

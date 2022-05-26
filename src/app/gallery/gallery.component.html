@@ -38,21 +38,27 @@
 		Още никои не е качил снимка. Можеш да бъди първият, който ще качи своята.
 	</h2>
 
-	<p-galleria *ngIf="imageUploads"
-		[value]="imageUploads"
-		[responsiveOptions]="responsiveOptions"
-		[containerStyle]="{'max-width': '100%', 'margin-top':'2em'}"
-		[numVisible]="200"
-		[circular]="true"
-		[showItemNavigators]="true"
-		[showThumbnails]="false"
-		[autoPlay]="true"
-		[transitionInterval]="2000">
-		<ng-template pTemplate="item"
-			let-item>
-			<img [src]="item.previewImageSrc"
-				style="width: 100%; display: block;">
-		</ng-template>
-	</p-galleria>
+  <div class="gallery-wrapper">
+    <p-galleria
+      *ngIf="imageUploads"
+      [value]="imageUploads"
+      [responsiveOptions]="responsiveOptions"
+      [containerStyle]="{'margin-top':'2em' }"
+      [numVisible]="200"
+      [circular]="true"
+      [showItemNavigators]="true"
+      [showThumbnails]="false"
+      [autoPlay]="true"
+      [transitionInterval]="2000"
+      [showIndicators]="true"
+      [changeItemOnIndicatorHover]="true"
+      [showIndicatorsOnItem]="true">
+      <ng-template pTemplate="item"
+        let-item>
+        <img [src]="item.previewImageSrc"
+          style="width: 100%; display: block; max-height: 750px; object-fit: cover;">
+      </ng-template>
+    </p-galleria>
+  </div>
 
 </div>
