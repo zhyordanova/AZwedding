@@ -85,6 +85,11 @@ export class GalleryComponent implements OnInit {
         this.uploadService.pushFileToStorage(this.currentImageUpload).subscribe(
           percentage => {
             this.percentage = Math.round(percentage ? percentage : 0);
+
+            if (this.percentage === 100) {
+              this.currentImageUpload = undefined;
+              this.fileName = 'Изберете снимка';
+            }
           },
           error => {
             this.percentage = 0;
